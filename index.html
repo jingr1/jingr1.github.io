@@ -7,19 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="keywords" content="undefined">
-  <meta name="description">
+  <meta name="description" content="Lionel&apos;s blog | Embedded Softwear Engineer | Auto Electronics">
 <meta property="og:type" content="website">
 <meta property="og:title" content="牧雲軒">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://jingr1.github.io/index.html">
 <meta property="og:site_name" content="牧雲軒">
-<meta property="og:description">
+<meta property="og:description" content="Lionel&apos;s blog | Embedded Softwear Engineer | Auto Electronics">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="牧雲軒">
-<meta name="twitter:description">
+<meta name="twitter:description" content="Lionel&apos;s blog | Embedded Softwear Engineer | Auto Electronics">
   
     <link rel="alternative" href="/atom.xml" title="牧雲軒" type="application/atom+xml">
   
-  <meta name="summary" content="null">
+  <meta name="summary" content="Lionel&#39;s blog | Embedded Softwear Engineer | Auto Electronics">
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -78,13 +78,6 @@
           </a>
         </li>
     
-        <li class="waves-block waves-effect">
-          <a href="/"  >
-            <i class="icon icon-lg icon-link"></i>
-            测试
-          </a>
-        </li>
-    
   </ul>
 
   <footer class="footer">
@@ -133,6 +126,66 @@
     <div class="container body-wrap">
       
   <ul class="post-list">
+  
+    <li class="post-list-item">
+  <article id="post-hexo-github搭建你的个人博客" class="article article-type-post" itemprop="blogPost">
+    
+      
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/05/30/hexo-github搭建你的个人博客/">使用hexo和github搭建你的个人博客</a>
+    </h3>
+  
+
+
+
+      <div class="post-meat flex-row">
+        <div class="flex-col"></div>
+        <time datetime="2016-05-30T12:26:47.000Z" itemprop="datePublished" class="post-tiem">
+  2016-05-30
+</time>
+      </div>
+      <div class="post-content" id="post-content" itemprop="postContent" >
+        
+          <h2 id="安装Node"><a href="#安装Node" class="headerlink" title="安装Node"></a>安装Node</h2><p>到<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>官网下载相应平台的最新版本，一路安装即可。我用的是<a href="http://nodejs.org/dist/v4.4.5/node-v4.4.5-x64.msi" target="_blank" rel="external">node-v4.4.5-x64.msi</a>.</p>
+<h2 id="安装hexo以及deploy插件"><a href="#安装hexo以及deploy插件" class="headerlink" title="安装hexo以及deploy插件"></a>安装hexo以及deploy插件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install-g hexo</span><br><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>Git的客户端很多，我用的是<a href="http://www.syntevo.com/smartgit/download" target="_blank" rel="external">SmartGit</a>.</p>
+<h2 id="配置Github建立Repository"><a href="#配置Github建立Repository" class="headerlink" title="配置Github建立Repository"></a>配置Github建立Repository</h2><p>建立与你用户名对应的仓库，仓库名必须为【your_user_name.github.io】</p>
+<h2 id="初始化你的博客"><a href="#初始化你的博客" class="headerlink" title="初始化你的博客"></a>初始化你的博客</h2><p>执行init命令初始化hexo到你指定的目录blog。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;blog&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="创建一个新博客"><a href="#创建一个新博客" class="headerlink" title="创建一个新博客"></a>创建一个新博客</h2><p>执行new命令，生成指定名称的文章至blog\source_posts\postName.md。<br>使用Markdown语法编写你的博客。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] <span class="string">"postName"</span></span><br></pre></td></tr></table></figure></p>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h2 id="生成静态页面"><a href="#生成静态页面" class="headerlink" title="生成静态页面"></a>生成静态页面</h2><p>执行如下命令，生成静态页面至blog\public\目录。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h2 id="本地启动"><a href="#本地启动" class="headerlink" title="本地启动"></a>本地启动</h2><p>执行如下命令，启动本地服务，进行文章预览调试。<br>浏览器输入<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000</a>就可以看到效果。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h2 id="Deploy到远程git仓库"><a href="#Deploy到远程git仓库" class="headerlink" title="Deploy到远程git仓库"></a>Deploy到远程git仓库</h2><ul>
+<li><p>修改 _config.yml 文件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    	type: git</span><br><span class="line">    	repo: https:<span class="comment">//github.com/jingr1/jingr1.github.io.git</span></span><br><span class="line">    	branch: master</span><br></pre></td></tr></table></figure>
+<p>  <em>注意：type，repo，branch前两个空格，“：”后面一个空格绝对不能少</em></p>
+</li>
+<li><p>执行deploy命令，将.deploy_git目录部署到GitHub</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<pre><code>More info: [Deployment](https://hexo.io/docs/deployment.html)
+</code></pre><ul>
+<li>在浏览器输入你的github page地址<a href="http://jingr1.github.io即可看到你的博客了。" target="_blank" rel="external">http://jingr1.github.io即可看到你的博客了。</a></li>
+</ul>
+
+        
+      </div>
+      <div class="post-footer clearfix">
+        <a href="/2016/05/30/hexo-github搭建你的个人博客/" class="post-more waves-effect waves-button waves-light">MORE</a>
+      </div>
+    
+
+  </article>
+
+
+</li>
   
     <li class="post-list-item">
   <article id="post-hello-world" class="article article-type-post" itemprop="blogPost">
@@ -192,7 +245,7 @@ var BLOG_SHARE = {
     title: "牧雲軒",
     pic: "/img/logo.jpg",
     summary: document.getElementsByName('summary')[0].content,
-    url: "http://yoursite.com/index.html"
+    url: "http://jingr1.github.io/index.html"
 };
 </script>
 <div class="global-share" id="global-share">
